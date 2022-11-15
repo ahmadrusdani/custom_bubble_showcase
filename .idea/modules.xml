@@ -2,11 +2,15 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/BubbleShowCase.iml" filepath="$PROJECT_DIR$/BubbleShowCase.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/bubbleshowcase/bubbleshowcase.iml" filepath="$PROJECT_DIR$/bubbleshowcase/bubbleshowcase.iml" />
-      <module fileurl="file://C:\Users\jcampos\StudioProjects\BubbleShowCase\bubbleshowcaseview\bubbleshowcaseview.iml" filepath="C:\Users\jcampos\StudioProjects\BubbleShowCase\bubbleshowcaseview\bubbleshowcaseview.iml" />
-      <module fileurl="file://C:\Users\jcampos\StudioProjects\BubbleShowCase\bubbleshowcase\bubbleshowcaseview.iml" filepath="C:\Users\jcampos\StudioProjects\BubbleShowCase\bubbleshowcase\bubbleshowcaseview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/BubbleShowCaseAndroid.iml" filepath="$PROJECT_DIR$/.idea/BubbleShowCaseAndroid.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/BubbleShowCaseAndroid.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/BubbleShowCaseAndroid.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/BubbleShowCaseAndroid.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/BubbleShowCaseAndroid.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/BubbleShowCaseAndroid.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/BubbleShowCaseAndroid.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/BubbleShowCaseAndroid.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/BubbleShowCaseAndroid.app.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/bubbleshowcase/BubbleShowCaseAndroid.bubbleshowcase.iml" filepath="$PROJECT_DIR$/.idea/modules/bubbleshowcase/BubbleShowCaseAndroid.bubbleshowcase.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/bubbleshowcase/BubbleShowCaseAndroid.bubbleshowcase.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/bubbleshowcase/BubbleShowCaseAndroid.bubbleshowcase.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/bubbleshowcase/BubbleShowCaseAndroid.bubbleshowcase.main.iml" filepath="$PROJECT_DIR$/.idea/modules/bubbleshowcase/BubbleShowCaseAndroid.bubbleshowcase.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/bubbleshowcase/BubbleShowCaseAndroid.bubbleshowcase.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/bubbleshowcase/BubbleShowCaseAndroid.bubbleshowcase.unitTest.iml" />
     </modules>
   </component>
 </project>

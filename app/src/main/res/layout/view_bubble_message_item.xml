@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/showCaseMessageViewLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:maxWidth="420dp"
+    android:orientation="vertical"
+    android:paddingHorizontal="28dp"
+    android:paddingVertical="28dp">
+
+    <TextView
+        android:id="@+id/textViewShowCaseTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        tools:text="Title"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/textViewShowCaseText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        tools:text="Description"
+        tools:visibility="visible" />
+
+    <Button
+        android:id="@+id/buttonViewShowCase"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="OK, Mengerti Sangad mengerti sangat"
+        tools:visibility="visible" />
+
+</LinearLayout>

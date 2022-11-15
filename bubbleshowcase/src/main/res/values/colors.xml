@@ -3,4 +3,67 @@
     <color name="transparent_grey">#77000000</color>
     <color name="blue_default">#3F51B5</color>
     <color name="white">#FFF</color>
+
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+
+    <color name="colorPrimary">#ffffff</color>
+    <color name="colorPrimaryDark">#ffffff</color>
+    <color name="colorAccent">#ffffff</color>
+    <color name="colorBlack">#333333</color>
+    <color name="colorBlackKanggo">#221f1f</color>
+    <color name="colorLightBlack75">#BF666666</color>
+    <color name="colorLightBlack">#666666</color>
+    <color name="colorGrey">#ececec</color>
+    <color name="colorGrey50">#73ececec</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorOrange">#ed4000</color>
+    <color name="colorOrangeLight">#ff8219</color>
+    <color name="colorOrangeExtraLight">#ffb729</color>
+    <color name="colorOrangeSnackbar">#fc8e32</color>
+    <color name="colorRed">#d80000</color>
+    <color name="colorRedKanggo">#da262e</color>
+    <color name="colorExtraLightRed">#f9d6d6</color>
+    <color name="colorGreen">#197463</color>
+    <color name="colorGreenDark">#084a3e</color>
+    <color name="colorExtraLightGreen">#edf4f3</color>
+    <color name="colorGreenLight">#207b00</color>
+    <color name="colorYellowLight">#ffe2a9</color>
+    <color name="colorBlackOpacity4">#66333333</color>
+    <color name="colorGreenYoung">#297302</color>
+    <color name="colorGreenMoney">#00B007</color>
+    <color name="colorGreySemiDark">#d9d9d9</color>
+    <color name="colorRedMaroon">#881115</color>
+    <color name="colorButtonDisable">#a0a0a0</color>
+    <color name="colorGreyBackGround">#e5e5e5</color>
+
+    <!--new-->
+    <color name="colorAbu">#e6e6e6</color>
+    <color name="colorGreyNew">#b5b5b5</color>
+    <color name="colorGreySoft">#eaeaea</color>
+    <color name="colorGreyChecked">#9a9a9a</color>
+    <color name="colorGreyUnchecked">#b7b7b7</color>
+    <color name="colorShimmer">#DDDDDD</color>
+    <color name="colorBlueSky">#4688f4</color>
+    <color name="colorBlue">#2786DD</color>
+    <color name="colorBluePastel">#35b8d6</color>
+    <color name="colorRedAlpha">#ffd8d8</color>
+    <color name="colorRedAlpha50">#FFEEEE</color>
+    <color name="colorLighterTosca">#ECFFE7</color>
+    <color name="colorLightTosca">#D1F9FF</color>
+    <color name="colorLighterYellow">#F9FEE9</color>
+
+    <!--Light Theme Color-->
+    <color name="textPrimaryColor">#252525</color>
+    <color name="textSecondaryColor">#FFFFFFFF</color>
+    <color name="textAddOnsColor">#9a9a9a</color>
+    <color name="textAccentColor">#da262e</color>
+    <color name="backgroundPrimary">#eaeaea</color>
+
+    <color name="backgroundMonochrome">#FFFFFF</color>
+    <color name="backgroundMonochromeSecondary">#000000</color>
 </resources>

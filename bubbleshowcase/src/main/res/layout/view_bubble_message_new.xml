@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/showCaseMessageViewLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:maxWidth="420dp"
+    android:orientation="vertical"
+    android:paddingHorizontal="@dimen/_28sdp"
+    android:paddingVertical="@dimen/_28sdp">
+
+    <TextView
+        android:id="@+id/textViewShowCaseTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/averta"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/_18ssp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        tools:text="Title"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/textViewShowCaseText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:fontFamily="@font/averta"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/_14ssp"
+        android:visibility="gone"
+        tools:text="Description"
+        tools:visibility="visible" />
+
+    <Button
+        android:id="@+id/buttonViewShowCase"
+        style="@style/ButtonPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:visibility="gone"
+        tools:text="OK, Mengerti"
+        tools:visibility="visible" />
+
+</LinearLayout>
