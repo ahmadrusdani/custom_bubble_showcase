@@ -53,6 +53,3 @@ dependencies {
 repositories {
     mavenCentral()
 }
-
-
-apply from: 'deploy.gradle'
