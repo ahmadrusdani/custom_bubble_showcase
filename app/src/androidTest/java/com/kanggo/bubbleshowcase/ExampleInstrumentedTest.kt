@@ -1,5 +1,6 @@
 package com.kanggo.bubbleshowcase
 
+import androidx.test.InstrumentationRegistry.getTargetContext
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
 
@@ -17,8 +18,8 @@ import org.junit.Assert.*
 class ExampleInstrumentedTest {
     @Test
     fun useAppContext() {
-        // Context of the app under test.
-//        val appContext = InstrumentationRegistry.getTargetContext()
-//        assertEquals("com.elconfidencial.bubbleshowcase", appContext.packageName)
+//         Context of the app under test.
+        val appContext = InstrumentationRegistry.getInstrumentation().targetContext
+        assertEquals("com.kanggo.bubbleshowcase", appContext.packageName)
     }
 }
