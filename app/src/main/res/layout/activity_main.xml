@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    tools:context="com.kanggo.bubbleshowcase.MainActivity">
+    tools:context="com.kanggo.bubbleshowcase.com.kanggo.example_bubbleshowcase.MainActivity">
 
     <Button
         android:id="@+id/buttonSimpleShowCase"

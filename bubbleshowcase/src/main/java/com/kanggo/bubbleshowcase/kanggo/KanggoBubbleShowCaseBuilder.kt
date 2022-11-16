@@ -1,18 +1,16 @@
 package com.kanggo.bubbleshowcase.kanggo
 
 import android.app.Activity
-import androidx.core.content.ContextCompat
 import android.view.View
 import android.view.ViewTreeObserver
+import androidx.core.content.ContextCompat
 import com.kanggo.bubbleshowcase.KanggoBubbleShowCaseListener
 import com.kanggo.bubbleshowcase.SequenceShowCaseListener
-import com.kanggo.bubbleshowcase.base.BaseBubbleShowCaseBuilder
-import java.util.ArrayList
 
 /**
  * Created by jcampos on 04/09/2018.
  */
-class KanggoBubbleShowCaseBuilder : BaseBubbleShowCaseBuilder {
+class KanggoBubbleShowCaseBuilder {
 
     internal var mActivity: Activity? = null
     internal var mTitle: String? = null

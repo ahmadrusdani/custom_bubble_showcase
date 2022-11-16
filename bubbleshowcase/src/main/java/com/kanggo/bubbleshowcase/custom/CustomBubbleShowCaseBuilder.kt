@@ -1,19 +1,16 @@
 package com.kanggo.bubbleshowcase.custom
 
 import android.app.Activity
-import androidx.core.content.ContextCompat
 import android.view.View
 import android.view.ViewTreeObserver
-import androidx.viewbinding.ViewBinding
+import androidx.core.content.ContextCompat
 import com.kanggo.bubbleshowcase.KanggoBubbleShowCaseListener
 import com.kanggo.bubbleshowcase.SequenceShowCaseListener
-import com.kanggo.bubbleshowcase.base.BaseBubbleShowCaseBuilder
-import java.util.ArrayList
 
 /**
  * Created by jcampos on 04/09/2018.
  */
-class CustomBubbleShowCaseBuilder : BaseBubbleShowCaseBuilder {
+class CustomBubbleShowCaseBuilder {
 
     internal var mActivity: Activity? = null
     internal var mView: View? = null
@@ -28,6 +25,8 @@ class CustomBubbleShowCaseBuilder : BaseBubbleShowCaseBuilder {
     internal var mSequenceShowCaseListener: SequenceShowCaseListener? = null
 
     private var onGlobalLayoutListenerTargetView: ViewTreeObserver.OnGlobalLayoutListener? = null
+
+    private var bubbleShowCase: CustomBubbleShowCase? = null
 
     /**
      * Builder constructor. It needs an instance of the current activity to convert it to a weak reference in order to avoid memory leaks
@@ -149,17 +148,21 @@ class CustomBubbleShowCaseBuilder : BaseBubbleShowCaseBuilder {
         return CustomBubbleShowCase(this)
     }
 
+    fun dismiss() {
+        bubbleShowCase?.dismiss()
+    }
+
     /**
      * Show the BubbleShowCase using the params added previously
      */
     fun show(): CustomBubbleShowCase {
-        val bubbleShowCase = build()
+        bubbleShowCase = build()
         if (mTargetView != null) {
             val targetView = mTargetView!!
             if (targetView.height == 0 || targetView.width == 0) {
                 //If the view is not already painted, we wait for it waiting for view changes using OnGlobalLayoutListener
                 onGlobalLayoutListenerTargetView = ViewTreeObserver.OnGlobalLayoutListener {
-                    bubbleShowCase.show()
+                    bubbleShowCase!!.show()
                     targetView.viewTreeObserver.removeOnGlobalLayoutListener(
                         onGlobalLayoutListenerTargetView
                     )
@@ -168,12 +171,12 @@ class CustomBubbleShowCaseBuilder : BaseBubbleShowCaseBuilder {
                     onGlobalLayoutListenerTargetView
                 )
             } else {
-                bubbleShowCase.show()
+                bubbleShowCase!!.show()
             }
         } else {
-            bubbleShowCase.show()
+            bubbleShowCase!!.show()
         }
-        return bubbleShowCase
+        return bubbleShowCase!!
     }
 
 }

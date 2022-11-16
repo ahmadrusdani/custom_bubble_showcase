@@ -1,3 +1,0 @@
-package com.kanggo.bubbleshowcase.base
-
-interface BaseBubbleShowCaseBuilder

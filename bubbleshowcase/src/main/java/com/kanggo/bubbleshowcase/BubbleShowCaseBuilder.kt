@@ -2,16 +2,14 @@ package com.kanggo.bubbleshowcase
 
 import android.app.Activity
 import android.graphics.drawable.Drawable
-import androidx.core.content.ContextCompat
 import android.view.View
 import android.view.ViewTreeObserver
-import com.kanggo.bubbleshowcase.base.BaseBubbleShowCaseBuilder
-import java.util.ArrayList
+import androidx.core.content.ContextCompat
 
 /**
  * Created by jcampos on 04/09/2018.
  */
-class BubbleShowCaseBuilder : BaseBubbleShowCaseBuilder {
+class BubbleShowCaseBuilder {
 
     internal var mActivity: Activity? = null
     internal var mImage: Drawable? = null

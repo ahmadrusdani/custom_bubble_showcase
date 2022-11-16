@@ -1,4 +1,4 @@
-package com.kanggo.bubbleshowcase
+package com.kanggo.example_bubbleshowcase
 
 import org.junit.Test
 

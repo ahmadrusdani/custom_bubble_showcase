@@ -1,14 +1,18 @@
-package com.kanggo.bubbleshowcase
+package com.kanggo.example_bubbleshowcase
 
 import android.graphics.Color
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import com.kanggo.bubbleshowcase.BubbleShowCase
+import com.kanggo.bubbleshowcase.BubbleShowCaseBuilder
+import com.kanggo.bubbleshowcase.BubbleShowCaseListener
+import com.kanggo.bubbleshowcase.BubbleShowCaseSequence
 import com.kanggo.bubbleshowcase.custom.CustomBubbleShowCaseBuilder
-import com.kanggo.bubbleshowcase.databinding.ActivityMainBinding
-import com.kanggo.bubbleshowcase.databinding.ViewBubbleMessageItemBinding
 import com.kanggo.bubbleshowcase.kanggo.KanggoBubbleShowCaseBuilder
+import com.kanggo.example_bubbleshowcase.databinding.ActivityMainBinding
+import com.kanggo.example_bubbleshowcase.databinding.ViewBubbleMessageItemBinding
 
 class MainActivity : AppCompatActivity() {
 
