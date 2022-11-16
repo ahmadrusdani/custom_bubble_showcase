@@ -60,6 +60,8 @@ class CustomBubbleShowCase(builder: CustomBubbleShowCaseBuilder) {
     private val mTargetView: View? = builder.mTargetView
     private val mBubbleShowCaseListener: KanggoBubbleShowCaseListener? =
         builder.mBubbleShowCaseListener
+    private var rootMainView: View = builder.mView!!
+    private var showAnimation: Boolean = builder.mShowAnimation
 
     //Sequence params
     private val mSequenceListener: SequenceShowCaseListener? = builder.mSequenceShowCaseListener
@@ -69,7 +71,6 @@ class CustomBubbleShowCase(builder: CustomBubbleShowCaseBuilder) {
     //References
     private var backgroundDimLayout: RelativeLayout? = null
     private var bubbleMessageViewBuilder: CustomBubbleMessageView.Builder? = null
-    private var rootView: View = builder.mView!!
 
     fun show() {
         if (mShowOnce != null) {
@@ -183,7 +184,7 @@ class CustomBubbleShowCase(builder: CustomBubbleShowCaseBuilder) {
     private fun getBubbleMessageViewBuilder(): CustomBubbleMessageView.Builder {
         return CustomBubbleMessageView.Builder()
             .from(mActivity)
-            .setContentView(rootView)
+            .setContentView(rootMainView)
             .arrowPosition(mArrowPositionList)
             .backgroundColor(mBackgroundColor)
     }
@@ -221,11 +222,9 @@ class CustomBubbleShowCase(builder: CustomBubbleShowCaseBuilder) {
         val targetScreenshot = takeScreenshot(targetView, mHighlightMode)
         val targetScreenshotView = ImageView(mActivity)
         targetScreenshotView.setImageBitmap(targetScreenshot)
-//        targetScreenshotView.setOnClickListener {
-//            if (!mDisableTargetClick)
-//                dismiss()
-//            mBubbleShowCaseListener?.onTargetClick(this)
-//        }
+        targetScreenshotView.setOnClickListener {
+            dismiss()
+        }
 
         val targetViewParams = RelativeLayout.LayoutParams(
             RelativeLayout.LayoutParams.WRAP_CONTENT,
@@ -238,11 +237,15 @@ class CustomBubbleShowCase(builder: CustomBubbleShowCaseBuilder) {
             0
         )
         backgroundDimLayout?.addView(
-            AnimationUtils.setBouncingAnimation(
-                targetScreenshotView,
-                0,
-                DURATION_BEATING_ANIMATION
-            ), targetViewParams
+            if (showAnimation) {
+                AnimationUtils.setBouncingAnimation(
+                    targetScreenshotView,
+                    0,
+                    DURATION_BEATING_ANIMATION
+                )
+            } else {
+                targetScreenshotView
+            }, targetViewParams
         )
     }
 

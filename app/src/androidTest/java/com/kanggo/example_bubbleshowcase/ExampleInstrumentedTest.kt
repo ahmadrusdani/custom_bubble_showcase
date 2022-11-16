@@ -1,4 +1,4 @@
-package com.kanggo.bubbleshowcase
+package com.kanggo.example_bubbleshowcase
 
 import androidx.test.InstrumentationRegistry.getTargetContext
 import androidx.test.platform.app.InstrumentationRegistry

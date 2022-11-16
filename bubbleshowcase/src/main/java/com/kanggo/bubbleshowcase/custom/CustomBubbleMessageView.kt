@@ -14,6 +14,7 @@ import androidx.core.content.ContextCompat
 import com.kanggo.bubbleshowcase.OnBubbleMessageViewListener
 import com.kanggo.bubbleshowcase.R
 import com.kanggo.bubbleshowcase.ScreenUtils
+import kotlin.math.roundToInt
 
 /**
  * Created by jcampos on 05/09/2018.
@@ -151,26 +152,20 @@ class CustomBubbleMessageView : LinearLayout {
         val xPosition: Int = when {
             isOutOfRightBound(targetViewLocationOnScreen) -> width - getSecurityArrowMargin()
             isOutOfLeftBound(targetViewLocationOnScreen) -> getSecurityArrowMargin()
-            else -> Math.round(
-                targetViewLocationOnScreen!!.centerX() - ScreenUtils.getAxisXpositionOfViewOnScreen(
-                    this
-                )
-            )
+            else -> (targetViewLocationOnScreen!!.centerX() - ScreenUtils.getAxisXpositionOfViewOnScreen(
+                this
+            )).roundToInt()
         }
         return xPosition
     }
 
     private fun getArrowVerticalPositionDependingOnTarget(targetViewLocationOnScreen: RectF?): Int {
-        val yPosition: Int
-        when {
-            isOutOfBottomBound(targetViewLocationOnScreen) -> yPosition =
-                height - getSecurityArrowMargin()
-            isOutOfTopBound(targetViewLocationOnScreen) -> yPosition = getSecurityArrowMargin()
-            else -> yPosition = Math.round(
-                targetViewLocationOnScreen!!.centerY() + ScreenUtils.getStatusBarHeight(
-                    context
-                ) - ScreenUtils.getAxisYpositionOfViewOnScreen(this)
-            )
+        val yPosition: Int = when {
+            isOutOfBottomBound(targetViewLocationOnScreen) -> height - getSecurityArrowMargin()
+            isOutOfTopBound(targetViewLocationOnScreen) -> getSecurityArrowMargin()
+            else -> (targetViewLocationOnScreen!!.centerY() + ScreenUtils.getStatusBarHeight(
+                context
+            ) - ScreenUtils.getAxisYpositionOfViewOnScreen(this)).roundToInt()
         }
         return yPosition
     }

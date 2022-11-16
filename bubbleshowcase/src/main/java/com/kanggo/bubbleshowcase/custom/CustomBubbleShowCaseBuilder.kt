@@ -21,6 +21,7 @@ class CustomBubbleShowCaseBuilder {
     internal var mIsLastOfSequence: Boolean? = null
     internal val mArrowPositionList = ArrayList<CustomBubbleShowCase.ArrowPosition>()
     internal var mTargetView: View? = null
+    internal var mShowAnimation: Boolean = false
     internal var mBubbleShowCaseListener: KanggoBubbleShowCaseListener? = null
     internal var mSequenceShowCaseListener: SequenceShowCaseListener? = null
 
@@ -105,6 +106,11 @@ class CustomBubbleShowCaseBuilder {
      */
     fun highlightMode(highlightMode: CustomBubbleShowCase.HighlightMode): CustomBubbleShowCaseBuilder {
         mHighlightMode = highlightMode
+        return this
+    }
+
+    fun showAnimation(param: Boolean): CustomBubbleShowCaseBuilder {
+        mShowAnimation = param
         return this
     }
 

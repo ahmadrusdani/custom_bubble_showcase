@@ -39,11 +39,15 @@ class MainActivity : AppCompatActivity() {
     private fun getSimpleCustomShowCaseBuilder(): CustomBubbleShowCaseBuilder {
         val showCase = CustomBubbleShowCaseBuilder(this)
             .targetView(binding.buttonSimpleShowCase)
+            .showAnimation(true)
         showCase.apply {
             val itemBinding = ViewBubbleMessageItemBinding.inflate(layoutInflater)
             setContentView(itemBinding.root)
             itemBinding.textViewShowCaseTitle.text = "This is Title"
             itemBinding.textViewShowCaseTitle.setTextColor(Color.BLUE)
+            itemBinding.buttonViewShowCase.setOnClickListener {
+                showCase.dismiss()
+            }
         }
         return showCase
     }
