@@ -6,6 +6,7 @@ import android.graphics.Paint
 import android.graphics.Path
 import android.graphics.RectF
 import android.util.AttributeSet
+import android.view.KeyEvent
 import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
@@ -209,6 +210,10 @@ class CustomBubbleMessageView : LinearLayout {
         canvas.drawPath(path, paint!!)
     }
 
+    override fun onDetachedFromWindow() {
+        super.onDetachedFromWindow()
+        this.removeView(itemView)
+    }
 
     //END REGION
 
@@ -257,4 +262,5 @@ class CustomBubbleMessageView : LinearLayout {
             return CustomBubbleMessageView(mContext, this)
         }
     }
+
 }

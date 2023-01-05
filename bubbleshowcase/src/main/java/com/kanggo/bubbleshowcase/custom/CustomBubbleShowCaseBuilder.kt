@@ -24,6 +24,7 @@ class CustomBubbleShowCaseBuilder {
     internal var mShowAnimation: Boolean = false
     internal var mBubbleShowCaseListener: KanggoBubbleShowCaseListener? = null
     internal var mSequenceShowCaseListener: SequenceShowCaseListener? = null
+    internal var mCancelable = true
 
     private var onGlobalLayoutListenerTargetView: ViewTreeObserver.OnGlobalLayoutListener? = null
 
@@ -111,6 +112,11 @@ class CustomBubbleShowCaseBuilder {
 
     fun showAnimation(param: Boolean): CustomBubbleShowCaseBuilder {
         mShowAnimation = param
+        return this
+    }
+
+    fun setCancelable(param: Boolean): CustomBubbleShowCaseBuilder {
+        mCancelable = param
         return this
     }
 

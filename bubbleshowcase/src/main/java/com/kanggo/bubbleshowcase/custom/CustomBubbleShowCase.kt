@@ -72,6 +72,8 @@ class CustomBubbleShowCase(builder: CustomBubbleShowCaseBuilder) {
     private var backgroundDimLayout: RelativeLayout? = null
     private var bubbleMessageViewBuilder: CustomBubbleMessageView.Builder? = null
 
+    private var cancelable = builder.mCancelable
+
     fun show() {
         if (mShowOnce != null) {
             if (isBubbleShowCaseHasBeenShowedPreviously(mShowOnce)) {
@@ -178,7 +180,11 @@ class CustomBubbleShowCase(builder: CustomBubbleShowCaseBuilder) {
     }
 
     private fun setBackgroundDimListener(backgroundDimLayout: RelativeLayout?) {
-        backgroundDimLayout?.setOnClickListener { dismiss() }
+        backgroundDimLayout?.setOnClickListener {
+           if (cancelable) {
+               dismiss()
+           }
+        }
     }
 
     private fun getBubbleMessageViewBuilder(): CustomBubbleMessageView.Builder {
@@ -497,5 +503,7 @@ class CustomBubbleShowCase(builder: CustomBubbleShowCaseBuilder) {
 
     private fun isTablet(): Boolean = mActivity.resources.getBoolean(R.bool.isTablet)
 
+    private fun overrideBack() {
+    }
 
 }

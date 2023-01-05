@@ -17,15 +17,17 @@ import com.kanggo.example_bubbleshowcase.databinding.ViewBubbleMessageItemBindin
 class MainActivity : AppCompatActivity() {
 
     private val binding by lazy { ActivityMainBinding.inflate(layoutInflater) }
+    private var customBubble: CustomBubbleShowCaseBuilder? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+        customBubble = getSimpleCustomShowCaseBuilder()
         setUpListeners()
     }
 
     private fun setUpListeners() = with(binding) {
-        buttonSimpleShowCase.setOnClickListener { getSimpleCustomShowCaseBuilder().show() }
+        buttonSimpleShowCase.setOnClickListener { customBubble?.show() }
         buttonColorShowCase.setOnClickListener { getCustomColorShowCaseBuilder().show() }
         buttonTextSizeShowCase.setOnClickListener { getTextSizeShowCaseBuilder().show() }
         buttonArrowLeftShowCase.setOnClickListener { getArrowLeftShowCaseBuilder().show() }
@@ -40,6 +42,7 @@ class MainActivity : AppCompatActivity() {
         val showCase = CustomBubbleShowCaseBuilder(this)
             .targetView(binding.buttonSimpleShowCase)
             .showAnimation(true)
+            .setCancelable(true)
         showCase.apply {
             val itemBinding = ViewBubbleMessageItemBinding.inflate(layoutInflater)
             setContentView(itemBinding.root)
@@ -139,6 +142,10 @@ class MainActivity : AppCompatActivity() {
                 getListenerShowCaseBuilder()
             )
         )
+    }
+
+    override fun onBackPressed() {
+        customBubble?.dismiss() ?: super.onBackPressed()
     }
 
 }
