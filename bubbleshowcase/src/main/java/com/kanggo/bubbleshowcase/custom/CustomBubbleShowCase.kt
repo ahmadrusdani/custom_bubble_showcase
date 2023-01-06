@@ -229,6 +229,7 @@ class CustomBubbleShowCase(builder: CustomBubbleShowCaseBuilder) {
         val targetScreenshotView = ImageView(mActivity)
         targetScreenshotView.setImageBitmap(targetScreenshot)
         targetScreenshotView.setOnClickListener {
+            if (!cancelable) return@setOnClickListener
             dismiss()
         }
 

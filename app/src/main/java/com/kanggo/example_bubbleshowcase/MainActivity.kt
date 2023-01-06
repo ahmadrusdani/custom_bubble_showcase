@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
         val showCase = CustomBubbleShowCaseBuilder(this)
             .targetView(binding.buttonSimpleShowCase)
             .showAnimation(true)
-            .setCancelable(true)
+            .setCancelable(false)
         showCase.apply {
             val itemBinding = ViewBubbleMessageItemBinding.inflate(layoutInflater)
             setContentView(itemBinding.root)
